@@ -1,8 +1,11 @@
 package com.syousangin.redcircuit.blocks;
 
+import com.google.common.collect.Sets;
 import com.syousangin.redcircuit.RedCircuit;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
@@ -10,7 +13,10 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 
 import net.minecraft.world.level.material.Material;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+
+import java.util.Set;
 
 public class Conductor extends Block {
     public Conductor(){
@@ -26,34 +32,57 @@ public class Conductor extends Block {
     }
 
 
+    @Override
+    public void setPlacedBy(Level pLevel, @NotNull BlockPos pPos, @NotNull BlockState pState, @Nullable LivingEntity pPlacer, @NotNull ItemStack pStack) {
+        if (!pLevel.isClientSide){
+            boolean nowState = this.calculatePower(pLevel,pPos);
+            if(pState.getValue(RedCircuit.EMPOWERED) != nowState) {
+                pLevel.setBlock(pPos, pState.setValue(RedCircuit.EMPOWERED, nowState), 2);
 
+                Set<BlockPos> set = Sets.newHashSet();
+                set.add(pPos);
+                for (Direction direction : Direction.values()) {
+                    set.add(pPos.relative(direction));
+                }
+                for (BlockPos blockPos : set) {
+                    pLevel.updateNeighborsAt(blockPos, this);
+                }
+            }
+        }
+    }
 
     /*周围环境改变的事件*/
     @Override
-    public void neighborChanged(BlockState pState, Level pLevel, BlockPos pPos, Block pBlock, BlockPos pFromPos, boolean pIsMoving) {
-        int bestRedSignalOfNeighbors = pLevel.getBestNeighborSignal(pPos);
-        /*获取最大的红石信号*/
-        boolean bestDigitalSignal=false;
-        for (Direction direction : Direction.values()){
-            /*遍历所有8个方向的方块，获取最大的信号值*/
-            BlockState neighborState = pLevel.getBlockState(pPos.relative(direction));
-            bestDigitalSignal =
-                    neighborState.is(BlockRegistry.conductor.get())
-                    && neighborState.getValue(RedCircuit.EMPOWERED)
-                    || bestDigitalSignal;
-        }
+    public void neighborChanged(@NotNull BlockState pState, Level pLevel, @NotNull BlockPos pPos, @NotNull Block pBlock, @NotNull BlockPos pFromPos, boolean pIsMoving) {
+        if (!pLevel.isClientSide){
+            boolean nowState = this.calculatePower(pLevel,pPos);
+            if(pState.getValue(RedCircuit.EMPOWERED) != nowState) {
+                pLevel.setBlock(pPos, pState.setValue(RedCircuit.EMPOWERED, nowState), 2);
 
-        /*更新自身的状态*/
-        pState.setValue(RedCircuit.EMPOWERED, bestRedSignalOfNeighbors>0 ||bestDigitalSignal);
-        pLevel.setBlock(pPos,pState,2);
-        /*更新周围状态*/
-        for (Direction direction : Direction.values()){
-            BlockState ns = pLevel.getBlockState(pPos.relative(direction));
-            if (ns.is(BlockRegistry.conductor.get()))
-                pLevel.updateNeighborsAt(pPos.relative(direction),BlockRegistry.conductor.get());
+                Set<BlockPos> set = Sets.newHashSet();
+                set.add(pPos);
+                for (Direction direction : Direction.values()) {
+                    set.add(pPos.relative(direction));
+                }
+                for (BlockPos blockPos : set) {
+                    pLevel.updateNeighborsAt(blockPos, this);
+                }
+            }
         }
-
     }
+    private boolean calculatePower(Level level,BlockPos thisPos){
+        boolean neighborRedstonePower = level.getBestNeighborSignal(thisPos) > 0;
+        boolean neighborDigitalPower = false;
+        for (Direction direction: Direction.values()){
+            if(level.getBlockState(thisPos.relative(direction)).is(BlockRegistry.conductor.get())){
+                neighborDigitalPower =
+                        level.getBlockState(thisPos.relative(direction)).getValue(RedCircuit.EMPOWERED)
+                        || neighborDigitalPower;
+            }
+        }
+        return neighborDigitalPower || neighborRedstonePower;
+    }
+
 
 
     @Override
