@@ -1,0 +1,70 @@
+[072月2022 18:36:35.370] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeclientuserdev, --version, MOD_DEV, --assetIndex, 1.18, --assetsDir, C:\Users\SyouSanGin\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 39.0.64, --fml.mcVersion, 1.18.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20211210.034407]
+[072月2022 18:36:35.375] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 9.1.0+9.1.0+main.6690ee51 starting: java version 17.0.2 by Oracle Corporation
+[072月2022 18:36:35.559] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/SyouSanGin/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%2327!/ Service=ModLauncher Env=CLIENT
+[072月2022 18:36:38.418] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeclientuserdev' with arguments [--version, MOD_DEV, --gameDir, ., --assetsDir, C:\Users\SyouSanGin\.gradle\caches\forge_gradle\assets, --assetIndex, 1.18]
+[18:36:45] [Render thread/WARN]: Assets URL 'union:/C:/Users/SyouSanGin/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.18.1-39.0.64_mapped_parchment_2022.01.23-1.18.1/forge-1.18.1-39.0.64_mapped_parchment_2022.01.23-1.18.1-recomp.jar%2377!/assets/.mcassetsroot' uses unexpected schema
+[18:36:45] [Render thread/WARN]: Assets URL 'union:/C:/Users/SyouSanGin/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.18.1-39.0.64_mapped_parchment_2022.01.23-1.18.1/forge-1.18.1-39.0.64_mapped_parchment_2022.01.23-1.18.1-recomp.jar%2377!/data/.mcassetsroot' uses unexpected schema
+[072月2022 18:36:45.845] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[18:36:45] [Render thread/INFO]: Setting user: Dev
+[18:36:46] [Render thread/INFO]: Backend library: LWJGL version 3.2.2 SNAPSHOT
+[18:36:46] [Render thread/ERROR]: Null comment for config option server, this is invalid and may be disallowed in the future.
+[18:36:47] [modloading-worker-0/INFO]: Forge mod loading, version 39.0.64, for MC 1.18.1 with MCP 20211210.034407
+[18:36:47] [modloading-worker-0/INFO]: MinecraftForge v39.0.64 Initialized
+[072月2022 18:36:50.696] [Render thread/INFO] [com.mojang.text2speech.NarratorWindows/]: Narrator library for x64 successfully loaded
+[18:36:51] [Render thread/INFO]: Reloading ResourceManager: Default, Mod Resources
+[072月2022 18:36:52.694] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json
+[072月2022 18:36:54.332] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Found status: BETA_OUTDATED Current: 39.0.64 Target: 39.0.66
+[18:37:02] [Worker-Main-13/WARN]: Unable to load model: 'redcircuit:conductor#inventory' referenced from: redcircuit:conductor#inventory: java.io.FileNotFoundException: redcircuit:models/item/conductor.json
+[18:37:03] [Worker-Main-11/ERROR]: Using missing texture, unable to load minecraft:textures/conductor_off_texture.png : java.io.FileNotFoundException: minecraft:textures/conductor_off_texture.png
+[18:37:06] [Render thread/INFO]: OpenAL initialized on device OpenAL Soft on 耳机 (Realtek(R) Audio)
+[18:37:06] [Render thread/INFO]: Sound engine started
+[18:37:07] [Render thread/INFO]: Created: 1024x512x4 minecraft:textures/atlas/blocks.png-atlas
+[18:37:07] [Render thread/INFO]: Created: 256x128x4 minecraft:textures/atlas/signs.png-atlas
+[18:37:07] [Render thread/INFO]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
+[18:37:07] [Render thread/INFO]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
+[18:37:07] [Render thread/INFO]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
+[18:37:07] [Render thread/INFO]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
+[18:37:07] [Render thread/INFO]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
+[18:37:11] [Render thread/INFO]: Created: 256x256x0 minecraft:textures/atlas/particles.png-atlas
+[18:37:11] [Render thread/INFO]: Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
+[18:37:11] [Render thread/INFO]: Created: 128x128x0 minecraft:textures/atlas/mob_effects.png-atlas
+[18:37:13] [Realms Notification Availability checker #1/INFO]: Could not authorize you against Realms server: Invalid session id
+[18:37:20] [Render thread/INFO]: Injecting existing registry data into this CLIENT instance
+[18:37:22] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[18:37:22] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+[18:37:22] [Render thread/WARN]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[18:37:22] [Render thread/WARN]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[18:37:22] [Render thread/WARN]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[18:37:22] [Render thread/INFO]: Reloading ResourceManager: Default, , main
+[18:37:25] [Render thread/INFO]: Loaded 7 recipes
+[18:37:26] [Render thread/INFO]: Loaded 1141 advancements
+[072月2022 18:37:27.082] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[18:37:27] [Server thread/INFO]: Starting integrated minecraft server version 1.18.1
+[18:37:27] [Server thread/INFO]: Generating keypair
+[18:37:27] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
+[18:37:28] [Render thread/INFO]: 准备生成区域中：0%
+[18:37:28] [Render thread/INFO]: 准备生成区域中：0%
+[18:37:28] [Render thread/INFO]: 准备生成区域中：0%
+[18:37:28] [Render thread/INFO]: 准备生成区域中：2%
+[18:37:29] [Render thread/INFO]: 准备生成区域中：8%
+[18:37:29] [Render thread/INFO]: 准备生成区域中：28%
+[18:37:30] [Render thread/INFO]: 准备生成区域中：55%
+[18:37:30] [Render thread/INFO]: 准备生成区域中：83%
+[18:37:31] [Server thread/INFO]: Successfully initialized permission handler forge:default_handler
+[18:37:31] [Render thread/INFO]: Time elapsed: 3666 ms
+[18:37:31] [Server thread/INFO]: Changing view distance to 12, from 10
+[18:37:31] [Server thread/INFO]: Changing simulation distance to 12, from 0
+[18:37:32] [Netty Local Client IO #0/INFO]: Connected to a modded server.
+[18:37:32] [Server thread/INFO]: Using new advancement loading for net.minecraft.server.PlayerAdvancements@5dea7697
+[18:37:32] [Server thread/INFO]: Dev[local:E:3ffddccb] logged in with entity id 1 at (-14.477450459247867, -60.0, 2.5440032353082875)
+[18:37:33] [Server thread/INFO]: Dev加入了游戏
+[18:37:33] [Render thread/INFO]: Loaded 9 advancements
+[18:37:33] [Server thread/INFO]: Saving and pausing game...
+[18:37:34] [Server thread/INFO]: Saving chunks for level 'ServerLevel[test]'/minecraft:overworld
+[18:37:34] [Server thread/INFO]: Saving chunks for level 'ServerLevel[test]'/minecraft:the_nether
+[18:37:34] [Server thread/INFO]: Saving chunks for level 'ServerLevel[test]'/minecraft:the_end
+[18:41:39] [Server thread/WARN]: Can't keep up! Is the server overloaded? Running 238134ms or 4762 ticks behind
+[18:41:39] [Server thread/INFO]: Saving and pausing game...
+[18:41:39] [Server thread/INFO]: Saving chunks for level 'ServerLevel[test]'/minecraft:overworld
+[18:41:39] [Server thread/INFO]: Saving chunks for level 'ServerLevel[test]'/minecraft:the_nether
+[18:41:39] [Server thread/INFO]: Saving chunks for level 'ServerLevel[test]'/minecraft:the_end

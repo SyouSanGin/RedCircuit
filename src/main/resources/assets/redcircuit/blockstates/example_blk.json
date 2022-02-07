@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "redcircuit:block/example_blk_model" }
+  }
+}

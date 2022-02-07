@@ -1,0 +1,16 @@
+modLoader="javafml"
+loaderVersion="[34,)"
+license="GNU GPLv3"
+[[mods]]
+modId="redcircuit"
+version="114.514"
+displayName="Red Circuit Mod"
+authors="SyouSanGin"
+description='''
+Red Circuit Mod
+
+Email:
+agno3_xsy@163.com    agno3@mail.ustc.edu.cn
+
+这么臭的版本真的有要的必要么？（恼
+'''
