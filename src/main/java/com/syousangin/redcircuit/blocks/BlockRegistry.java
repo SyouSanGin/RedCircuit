@@ -12,8 +12,5 @@ public class BlockRegistry {
             com.syousangin.redcircuit.blocks.EXAMPLE_BLK.EXAMPLE_BLK_ID,
             EXAMPLE_BLK::new
     );
-    public static final RegistryObject<Conductor> conductor = BLOCKS.register(
-            Conductor.CONDUCTOR_ID,
-            Conductor::new
-    );
+
 }
