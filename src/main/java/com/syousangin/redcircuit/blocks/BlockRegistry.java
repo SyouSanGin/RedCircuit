@@ -16,5 +16,9 @@ public class BlockRegistry {
             NonDelayRepeater.nonDelayRepeaterId,
             NonDelayRepeater::new
     );
+    public static final RegistryObject<Block> andGate = BLOCKS.register(
+            AndGate.andGateID,
+            AndGate::new
+    );
 
 }
