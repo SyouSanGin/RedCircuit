@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "redcircuit:block/xor_gate_on_texture"
+  }
+}

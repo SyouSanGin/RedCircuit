@@ -1,9 +1,9 @@
 package com.syousangin.redcircuit.tabs;
 
-import com.syousangin.redcircuit.RedCircuit;
 import com.syousangin.redcircuit.items.ItemRegistry;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
+import org.jetbrains.annotations.NotNull;
 
 public class RedCircuitTab extends CreativeModeTab {
     public RedCircuitTab() {
@@ -11,7 +11,7 @@ public class RedCircuitTab extends CreativeModeTab {
     }
 
     @Override
-    public ItemStack makeIcon() {
-        return new ItemStack(ItemRegistry.EXAMPLE_BLK_ITEM.get());
+    public @NotNull ItemStack makeIcon() {
+        return new ItemStack(ItemRegistry.nonDelayRepeater_item.get());
     }
 }
