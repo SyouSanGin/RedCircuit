@@ -3,5 +3,7 @@
   "block.redcircuit.or_gate": "你行你上",
   "block.redcircuit.xor_gate": "一山不容二虎",
   "block.redcircuit.non_delay_repeater": "快速充电",
-  "block.redcircuit.fast_torch": "可以快速‘杰哥不要’的火把"
+  "block.redcircuit.fast_torch": "可以快速‘杰哥不要’的火把",
+  "itemGroup.redcircuit_tab" : "‘普通’的红石附加模组（doge）"
+
 }

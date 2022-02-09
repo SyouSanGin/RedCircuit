@@ -3,5 +3,6 @@
   "block.redcircuit.or_gate": "Or Gate",
   "block.redcircuit.xor_gate": "Xor Gate",
   "block.redcircuit.non_delay_repeater": "Low Delay Repeater",
-  "block.redcircuit.fast_torch": "Fast Torch"
+  "block.redcircuit.fast_torch": "Fast Torch",
+  "itemGroup.redcircuit_tab" : "Red Circuit"
 }
