@@ -1,0 +1,7 @@
+{
+  "item.redcircuit.and_gate": "And Gate",
+  "item.redcircuit.or_gate": "Or Gate",
+  "item.redcircuit.xor_gate": "Xor Gate",
+  "item.redcircuit.non_delay_repeater": "Low Delay Repeater",
+  "item.redcircuit.fast_torch": "Fast Torch"
+}
